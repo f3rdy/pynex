@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  nexus:
+    image: sonatype/nexus
+    ports:
+    - "8081:8081"
+  pynex:
+    build: .
+    ports:
+    - "5000:5000"
