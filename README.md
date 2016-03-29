@@ -18,3 +18,10 @@ docker build -t pynex .
 docker run -d -p 5000:5000 --name pynex pynex
 ```
 
+# Compose
+
+A `docker-compose.yaml` file is used to spin up a nexus instance (for testing purposes) and the file itself.
+
+```
+docker-compose up
+```
