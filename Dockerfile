@@ -23,4 +23,4 @@ ADD pynex $WORKDIR/pynex
 
 # startup
 WORKDIR $WORKDIR/pynex
-CMD ["python3", "main.py"]
+CMD ["python3", "app.py"]

@@ -5,19 +5,22 @@ from flask import render_template
 from flask import redirect
 
 import nexus
-import json
 
 app = Flask(__name__)
 
 app.debug = True
 
+
 @app.route('/')
 def index():
     return redirect('/hello')
 
+
 @app.route('/users/')
 def get_users():
-    return "Hello: " + nexus.get_users()
+    data = nexus.get_users()['data']
+    return render_template('users.html', data=data)
+
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
